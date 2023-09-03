@@ -16,8 +16,10 @@ public class MainServlet extends HttpServlet {
     static private final String PATH_FOR_REMOVE_POST = "/api/posts/\\d+";
     @Override
     public void init() {
+
         final var context = new AnnotationConfigApplicationContext(JavaConfig.class);
         controller = context.getBean(PostController.class);
+
     }
 
     @Override
